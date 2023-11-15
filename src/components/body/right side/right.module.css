@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+.rightSideWrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.rightSideTitle {
+    font-family: 'Oswald', sans-serif;
+    color: yellow;
+    margin: 0;
+}
+
+.taskStyleBody {    
+    background-color: rgb(207, 207, 207);
+    width: 100%;
+    min-height: 50px;
+    padding: 5px 0 5px 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.taskDone{
+    text-decoration: line-through;
+
+}
+.taskStyleIcon {
+    color: yellow;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.taskStyleWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.editForm{
+    width: 100%;
+    overflow: hidden;
+}
+
+.editForm input {
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 0 5px 20px ;
+}
+
+.editForm button{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(88, 88, 88);
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.red { 
+    color: rgb(175, 27, 27);
+}
+
+.green{
+    color: rgb(78, 131, 0);
+}
+
+.yellow{ 
+    color:  yellow;
+}
+.green :hover{
+    cursor: pointer;
+    font-size: 22px;
+
+}
+
+.red :hover{
+    cursor: pointer;
+    font-size: 22px;
+    box-sizing:border-box;
+
+}
+
+.yellow :hover{
+    cursor: pointer;
+    font-size: 22px;
+    box-sizing:border-box;
+
+}

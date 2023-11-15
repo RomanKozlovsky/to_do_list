@@ -1,0 +1,26 @@
+/* .taskStyleWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taskStyleBody {
+    width: 80%;
+    margin: 20px 30px 20px 30px;
+    height: auto;
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 3px 3px rgb(94, 94, 94);
+}
+.taskStyleIcon{
+    color: yellow;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.taskStyleIcon:hover{
+    cursor: pointer;
+    color: green;
+} 

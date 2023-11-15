@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+.headerBodyStyle{
+    background-color: #273041;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin: 0;
+}
+.headerTitleStyle{
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    color: yellow;
+}
+.headerDataStyle{
+    color: chartreuse;
+}
+.headerLogoStyle{
+    text-align: right;
+}
+.headerLogoStyle img{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+
+}
