@@ -11,6 +11,7 @@ function Left(props) {
             <div className={style.leftSideWrapper}>
                 <form ref={myForm} >
                     <h1 className={style.leftSideTitle}>ДОДАТИ НОВЕ ЗАВДАННЯ:</h1>
+                    <h1>Відкат до коміта</h1>
                     <textarea onChange={(event) => setTextAreaValue(event.target.value)} type="text" placeholder="писать сюди..." />
                     <button className={style.btn} type="button" onClick={() => {
                         myForm.current.reset();
