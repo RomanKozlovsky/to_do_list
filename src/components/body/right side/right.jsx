@@ -6,18 +6,25 @@ import { useState } from 'react';
 function Right(props) {
 
     const [editFormClick, setEditForm] = useState(false);
-
     const [inputValue, setInputValue] = useState('');
+    const [search, setSearch] = useState('');
+
+    const filterTask = props.data.filter((task) => {
+        return task.text.toLowerCase().includes(search.toLowerCase());
+    })
 
     return (
         <>
             <div className={style.rightSideWrapper}>
-                <h1 className={style.rightSideTitle}>СПИСОК ЗАВДАНЬ:</h1>
+                <div className={style.titleBody}>
+                    <h1 className={style.rightSideTitle}>СПИСОК ЗАВДАНЬ:</h1>
+                    <input onChange={(event) => setSearch(event.target.value)} placeholder='пошук'/>
+                </div>
                 {props.data.length < 1
                     ?
                     <h1 className={style.rightSideTitle}>список завдань порожній...</h1>
                     :
-                    <div>{props.data.map((index) => (<div key={index.id} >
+                    <div>{filterTask.map((index) => (<div key={index.id} >
                         <div className={style.taskStyleWrapper}>
                             <div className={style.taskStyleBody}>
                                 {props.taskIsDone && index.id == props.currentId ? <div className={style.taskDone}>{index.text}</div> : <div>{index.text}</div>}

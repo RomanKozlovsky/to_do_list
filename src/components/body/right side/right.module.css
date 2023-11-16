@@ -87,5 +87,19 @@
     cursor: pointer;
     font-size: 22px;
     box-sizing:border-box;
+}
 
+.titleBody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleBody input{
+    width: 200px;
+    height: 25px;
+    border: none;
+    /* border-radius: 10px; */
+    padding: 5px;
+    background-color: rgb(207, 207, 207);
 }
