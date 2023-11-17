@@ -32,10 +32,9 @@
 }
 
 .taskStyleWrapper {
-    display: flex;
-    justify-content: space-between;
     padding-top: 20px;
 }
+
 .editForm{
     width: 100%;
     overflow: hidden;
