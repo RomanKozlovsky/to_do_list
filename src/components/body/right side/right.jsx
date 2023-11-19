@@ -9,12 +9,9 @@ function Right(props) {
     const [inputValue, setInputValue] = useState('');
     const [search, setSearch] = useState('');
 
-
-
     const filterTask = props.data.filter((task) => {
         return task.text.toLowerCase().includes(search.toLowerCase());
     })
-
 
     return (
         <>
