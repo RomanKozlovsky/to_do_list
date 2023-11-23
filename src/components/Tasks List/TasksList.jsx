@@ -17,10 +17,7 @@ export default function TasksList(props) {
       <div className={style.rightSideWrapper}>
         <div className={style.titleBody}>
           <h1 className={style.rightSideTitle}>task list:</h1>
-          <input
-            onChange={(event) => setSearch(event.target.value)}
-            placeholder="search"
-          />
+          <input onChange={(event) => setSearch(event.target.value)} placeholder="search" />
         </div>
         {filterTask.length < 1 ? (
           <h2 className={style.rightSideTitle}>task list is empty...</h2>
@@ -31,37 +28,21 @@ export default function TasksList(props) {
                 <div className={style.taskStyleWrapper}>
                   <div className={style.taskStyleBody}>
                     <div className={style.taskBodyStyle}>
-                      <input
-                        onClick={() =>
-                          props.doneTask(index.id, index.text, index.isDone)
-                        }
-                        type="checkbox"
-                      />
+                      <input onClick={() => props.doneTask(index.id, index.text, index.isDone)} type="checkbox" />
                       {index.isDone ? (
-                        <div
-                          className={`${style.taskDone} ${style.taskBodyStyle}`}
-                        >
-                          {index.text}
-                        </div>
+                        <div className={`${style.taskDone} ${style.taskBodyStyle}`}>{index.text}</div>
                       ) : (
                         <div className={style.taskBodyStyle}>{index.text}</div>
                       )}
                     </div>
-
                     <div>
                       <span
-                        onClick={() => (
-                          props.setupForm(index.id, index.text),
-                          setEditForm(!editFormClick)
-                        )}
+                        onClick={() => (props.setupForm(index.id, index.text), setEditForm(!editFormClick))}
                         className={`${style.taskStyleIcon} ${style.yellow}`}
                       >
                         <FontAwesomeIcon icon={faHammer} />
                       </span>
-                      <span
-                        onClick={() => props.deleteTask(index.id)}
-                        className={`${style.taskStyleIcon} ${style.red}`}
-                      >
+                      <span onClick={() => props.deleteTask(index.id)} className={`${style.taskStyleIcon} ${style.red}`}>
                         <FontAwesomeIcon icon={faTrash} />
                       </span>
                     </div>
@@ -70,19 +51,11 @@ export default function TasksList(props) {
                 {editFormClick && index.id === props.currentId && (
                   <div>
                     <form className={style.editForm}>
-                      <input
-                        onChange={(event) => setInputValue(event.target.value)}
-                        type="text"
-                        placeholder="make changes"
-                      />
+                      <input onChange={(event) => setInputValue(event.target.value)} type="text" placeholder="make changes" />
                       <br />
                       <button
                         disabled={!inputValue.length}
-                        onClick={() => (
-                          setEditForm(!editFormClick),
-                          props.editTask(index.id, inputValue),
-                          setInputValue("")
-                        )}
+                        onClick={() => (setEditForm(!editFormClick), props.editTask(index.id, inputValue), setInputValue(""))}
                         type="submit"
                       >
                         change...
