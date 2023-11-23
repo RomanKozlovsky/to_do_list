@@ -2,7 +2,6 @@ import style from "../Layout/Layout.module.css";
 import InputTask from "../Input Task/InputTask";
 import { useState } from "react";
 import TasksList from "../Tasks List/TasksList";
-import Footer from '../Footer/Footer';
 
 export default function Layout() {
   const [textAreaValue, setTextAreaValue] = useState([]);

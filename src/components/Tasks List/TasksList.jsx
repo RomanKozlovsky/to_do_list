@@ -30,17 +30,24 @@ export default function TasksList(props) {
               <div key={index.id}>
                 <div className={style.taskStyleWrapper}>
                   <div className={style.taskStyleBody}>
-                    <input
-                      onClick={() =>
-                        props.doneTask(index.id, index.text, index.isDone)
-                      }
-                      type="checkbox"
-                    />
-                    {index.isDone ? (
-                      <div className={style.taskDone}>{index.text}</div>
-                    ) : (
-                      <div>{index.text}</div>
-                    )}
+                    <div className={style.taskBodyStyle}>
+                      <input
+                        onClick={() =>
+                          props.doneTask(index.id, index.text, index.isDone)
+                        }
+                        type="checkbox"
+                      />
+                      {index.isDone ? (
+                        <div
+                          className={`${style.taskDone} ${style.taskBodyStyle}`}
+                        >
+                          {index.text}
+                        </div>
+                      ) : (
+                        <div className={style.taskBodyStyle}>{index.text}</div>
+                      )}
+                    </div>
+
                     <div>
                       <span
                         onClick={() => (
@@ -76,7 +83,7 @@ export default function TasksList(props) {
                           props.editTask(index.id, inputValue),
                           setInputValue("")
                         )}
-                        type="sybmut"
+                        type="submit"
                       >
                         change...
                       </button>

@@ -13,7 +13,7 @@
 .taskStyleBody {
   background-color: rgb(207, 207, 207);
   width: 100%;
-  min-height: 50px;
+  height: auto;
   padding: 5px 0 5px 20px;
   display: inline-flex;
   justify-content: space-between;
@@ -41,6 +41,8 @@
 
 .taskStyleWrapper {
   padding-top: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 .editForm {
@@ -64,7 +66,7 @@
 }
 
 .editForm button {
-  background-color: #04AA6D; /* Green */
+  background-color: #04aa6d; /* Green */
   border: none;
   color: white;
   padding: 10px 50px;
@@ -82,7 +84,7 @@
   color: white;
 }
 .button:hover {
-  background-color: #04AA6D; /* Green */
+  background-color: #04aa6d; /* Green */
   color: white;
 }
 
@@ -117,4 +119,14 @@
   font-size: 16px;
   resize: none;
   margin: 0 0 10px 0;
+}
+
+.taskBodyStyle {
+  display: inline-flex;
+}
+
+.taskBodyStyle input {
+  margin-right: 20px;
+  height: auto;
+    
 }
