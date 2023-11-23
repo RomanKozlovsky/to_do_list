@@ -2,6 +2,7 @@ import style from "../Layout/Layout.module.css";
 import InputTask from "../Input Task/InputTask";
 import { useState } from "react";
 import TasksList from "../Tasks List/TasksList";
+import Header from "../Header/Header";
 
 export default function Layout() {
   const [textAreaValue, setTextAreaValue] = useState([]);
@@ -39,6 +40,7 @@ export default function Layout() {
 
   return (
     <div className={style.bodyWrapperStyle}>
+      <Header />
       <InputTask catchDataFromTextarea={catchDataFromTextarea} />
       <TasksList
         currentId={currentId}

@@ -1,12 +1,15 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout.jsx";
-import Header from "./components/Header/Header";
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./components/Login Page/LoginPage.jsx";
 
 export default function App() {
   return (
     <div className="wrapper">
-      <Header />
-      <Layout />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+        <Route path="login" element={<LoginPage />}></Route>
+      </Routes>
     </div>
   );
 }

@@ -4,17 +4,19 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 200px;
   margin: 0;
 }
 .headerTitleStyle {
   font-family: "Oswald", sans-serif;
   font-size: 50px;
-  /* color: yellow; */
 }
-.headerDataStyle {
-  /* color: chartreuse; */
-}
+
 .headerLogoStyle {
   text-align: right;
+}
+
+.logOut {
+  color: black;
+  font-size: 30px;
 }
