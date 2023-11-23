@@ -4,7 +4,7 @@ export default function Footer(props) {
   return (
     <>
       <div className={style.footerWrapper}>
-        <p>footer</p>
+        <p>Roman Kozlovsky 2023</p>
       </div>
     </>
   );

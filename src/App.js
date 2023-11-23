@@ -8,7 +8,7 @@ export default function App() {
     <div className="wrapper">
       <Header />
       <Layout />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

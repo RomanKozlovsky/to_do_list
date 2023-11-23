@@ -2,11 +2,13 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  background-color: #282c34;
+  background: linear-gradient(rgb(148, 148, 148), 30%, white);
 }
 
 .wrapper {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

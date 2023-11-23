@@ -1,104 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
 .rightSideWrapper {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 60px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
 .rightSideTitle {
-    font-family: 'Oswald', sans-serif;
-    color: yellow;
-    margin: 0;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
 }
-
-.taskStyleBody {    
-    background-color: rgb(207, 207, 207);
-    width: 100%;
-    min-height: 50px;
-    padding: 5px 0 5px 20px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-} 
-.taskDone{
-    text-decoration: line-through;
-
+.taskStyleBody {
+  background-color: rgb(207, 207, 207);
+  width: 100%;
+  min-height: 50px;
+  padding: 5px 0 5px 20px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+  margin: 0 0 10px 0;
+}
+.taskDone {
+  text-decoration: line-through;
 }
 .taskStyleIcon {
-    color: yellow;
-    font-size: 20px;
-    margin: 5px;
+  font-size: 20px;
+  margin: 5px;
 }
 
 .taskStyleWrapper {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
-.editForm{
-    width: 100%;
-    overflow: hidden;
+.editForm {
+  width: 100%;
+  overflow: hidden;
 }
 
 .editForm input {
-    height: 50px;
-    width: 100%;
-    margin-top: 10px;
-    padding: 5px 0 5px 20px ;
+  width: 100%;
+  height: 40px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+  margin: 0 0 10px 0;
 }
 
-.editForm button{
-    margin-top: 10px;
-    width: 100px;
-    height: 30px;
-    background-color: rgb(88, 88, 88);
-    font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+.editForm button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.red { 
-    color: rgb(175, 27, 27);
+.editForm button:hover {
+  background-color: #555555;
+  color: white;
+}
+.button:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
 }
 
-.green{
-    color: rgb(78, 131, 0);
+.red :hover {
+  cursor: pointer;
+  font-size: 22px;
+  box-sizing: border-box;
 }
 
-.yellow{ 
-    color:  yellow;
-}
-.green :hover{
-    cursor: pointer;
-    font-size: 22px;
-
+.yellow :hover {
+  cursor: pointer;
+  font-size: 22px;
+  box-sizing: border-box;
 }
 
-.red :hover{
-    cursor: pointer;
-    font-size: 22px;
-    box-sizing:border-box;
-
+.titleBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.yellow :hover{
-    cursor: pointer;
-    font-size: 22px;
-    box-sizing:border-box;
-}
-
-.titleBody{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.titleBody input{
-    width: 200px;
-    height: 25px;
-    border: none;
-    /* border-radius: 10px; */
-    padding: 5px;
-    background-color: rgb(207, 207, 207);
+.titleBody input {
+  width: 300px;
+  height: 40px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+  margin: 0 0 10px 0;
 }

@@ -16,14 +16,14 @@ export default function TasksList(props) {
     <>
       <div className={style.rightSideWrapper}>
         <div className={style.titleBody}>
-          <h1 className={style.rightSideTitle}>СПИСОК ЗАВДАНЬ:</h1>
+          <h1 className={style.rightSideTitle}>task list:</h1>
           <input
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="пошук"
+            placeholder="search"
           />
         </div>
         {filterTask.length < 1 ? (
-          <h1 className={style.rightSideTitle}>список завдань порожній...</h1>
+          <h2 className={style.rightSideTitle}>task list is empty...</h2>
         ) : (
           <div>
             {filterTask.map((index) => (
@@ -66,7 +66,7 @@ export default function TasksList(props) {
                       <input
                         onChange={(event) => setInputValue(event.target.value)}
                         type="text"
-                        placeholder="введіть зміни"
+                        placeholder="make changes"
                       />
                       <br />
                       <button
@@ -78,7 +78,7 @@ export default function TasksList(props) {
                         )}
                         type="sybmut"
                       >
-                        ЗМІНИТИ
+                        change...
                       </button>
                     </form>
                   </div>
