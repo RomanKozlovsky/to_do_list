@@ -1,10 +1,9 @@
-import style from './header.module.css'
-import img from './img/logo.png'
+import style from './Header.module.css'
 import { faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-function Header() {
+export default function Header() {
   const curentDate = new Date();
   return (
     <>
@@ -14,13 +13,8 @@ function Header() {
           <span className={style.headerDataStyle}> {curentDate.toLocaleDateString()}
           </span>
         </div>
-        <div className={style.headerLogoStyle}>
-          <img src={img} alt='error'/>
-        </div>
       </div>
     </>
 
   )
 }
-
-export default Header;

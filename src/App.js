@@ -1,15 +1,13 @@
 import './App.css';
-import Body from './components/body/body';
-import Header from './components/header/header';
+import Layout from './components/Layout/Layout.jsx';
+import Header from './components/Header/Header';
 
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Header />
-      <Body />
+      <Layout />
     </div>
   );
 }
-
-export default App;

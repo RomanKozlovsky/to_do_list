@@ -1,8 +1,8 @@
-import style from './left.module.css';
+import style from './InputTask.module.css'
 import { useState, useRef } from "react";
 
 
-function Left(props) {
+export default function InputTask(props) {
 
     const [textAreaValue, setTextAreaValue] = useState('');
     const myForm = useRef(null);
@@ -37,4 +37,3 @@ function Left(props) {
         </>
     )
 }
-export default Left;
