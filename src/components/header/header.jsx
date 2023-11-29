@@ -1,4 +1,4 @@
-import style from "./Header.module.css";
+import style from "./Header.module.css"
 import { faList, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";

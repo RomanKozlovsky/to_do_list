@@ -61,7 +61,7 @@ export default function RegistrationPage(props) {
                   <div className={style.test3}>
                     <label htmlFor="lastName">First Name</label>
                     <Field name="lastName" placeholder="enter last name" />
-                    <ErrorMessage name="lastName" component="div"/>
+                    <ErrorMessage name="lastName" component="div" />
                   </div>
                 )}
 
@@ -87,7 +87,7 @@ export default function RegistrationPage(props) {
                 </button>
                 <button>
                   <Link className={style.logOut} to="/login">
-                    Sign in Roman
+                    Sign in
                   </Link>
                 </button>
               </Form>
