@@ -57,3 +57,11 @@ a {
     width: 70%;
     height: 70%;
 }
+
+.errorStyle{
+    color: red
+}
+
+.errorInput input{
+    border-bottom: 1px solid red;
+}
