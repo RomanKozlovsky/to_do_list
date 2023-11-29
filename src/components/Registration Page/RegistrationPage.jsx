@@ -87,7 +87,7 @@ export default function RegistrationPage(props) {
                 </button>
                 <button>
                   <Link className={style.logOut} to="/login">
-                    Sign in
+                    Sign in Roman
                   </Link>
                 </button>
               </Form>
