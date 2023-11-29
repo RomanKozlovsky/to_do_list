@@ -9,7 +9,8 @@ export default function Header() {
     <>
       <div className={style.headerBodyStyle}>
         <div className={style.headerTitleStyle}>
-          {<FontAwesomeIcon icon={faList} spinReverse />} TO-DO LIST:
+          
+          {<FontAwesomeIcon icon={faList} spinReverse />}TO-DO LIST:
           <span className={style.headerDataStyle}>
             {" "}
             {curentDate.toLocaleDateString()}

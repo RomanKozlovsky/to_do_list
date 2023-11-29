@@ -11,7 +11,7 @@ export default function LoginPage(props) {
         </div>
         <div className={style.loginPageAuthorizationForm}>
           <form action="">
-            <label htmlFor="email">Email </label>
+            <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" placeholder="email" />
             <br />
             <label htmlFor="password">Password </label>
