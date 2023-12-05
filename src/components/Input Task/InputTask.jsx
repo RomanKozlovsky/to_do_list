@@ -1,5 +1,5 @@
 import style from './InputTask.module.css'
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 
 export default function InputTask(props) {
@@ -17,6 +17,7 @@ export default function InputTask(props) {
             return null;
         }
     }
+
 
     return (
         <>

@@ -54,7 +54,7 @@ export default function RegistrationPage(props) {
               <ErrorMessage name="email">{msg => <div>please enter email</div>}</ErrorMessage>
 
               <br />
-              <button onClick={() => props.addNewUser(newUser)}  type="submit" >To register</button>
+              <button  type="submit" >To register</button>
               <button >
                 <Link className={style.logOut} to="/login">
                   Sign in
