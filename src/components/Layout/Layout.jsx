@@ -6,28 +6,18 @@ import Header from "../Header/Header";
 
 export default function Layout() {
   const [textAreaValue, setTextAreaValue] = useState([]);
-  const [posts, setPosts] = useState([]);
   const [currentId, setCurrentId] = useState(null);
   const [taskIsDone, setTaskIsDone] = useState(false);
   const [editFormText, setEditFormText] = useState("");
 
   useEffect(() => {
     const todos = localStorage.getItem('todosList') || [];
-    setTextAreaValue(JSON.parse(todos))
+    (todos.length < 2 ? setTextAreaValue([]) : setTextAreaValue(JSON.parse(todos)))
   }, [])
-
 
   useEffect(() => {
     localStorage.setItem('todosList', JSON.stringify(textAreaValue), [textAreaValue])
   })
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => response.json())
-      .then(json =>
-        console.log(json)
-      )
-  }, [taskIsDone])
 
   function catchDataFromTextarea(value) {
     const id = textAreaValue.length + 1;

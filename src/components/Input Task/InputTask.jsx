@@ -1,5 +1,5 @@
 import style from './InputTask.module.css'
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 
 export default function InputTask(props) {
@@ -24,7 +24,7 @@ export default function InputTask(props) {
             <div className={style.leftSideWrapper}>
                 <form ref={myForm} >
                     <h1 className={style.leftSideTitle}>add a new task:</h1>
-                    <textarea onChange={(event) => setTextAreaValue(event.target.value)} onKeyDown={onKeyDown}
+                    <input onChange={(event) => setTextAreaValue(event.target.value)} onKeyDown={onKeyDown}
                         type="text" placeholder="write..." />
                     <button className={style.btn} type="button" onClick={() => {
                         myForm.current.reset();

@@ -2,14 +2,16 @@
 
 .headerBodyStyle {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 200px;
   margin: 0;
+
 }
 .headerTitleStyle {
   font-family: "Oswald", sans-serif;
   font-size: 50px;
+  width: 50%;
 }
 
 .headerLogoStyle {

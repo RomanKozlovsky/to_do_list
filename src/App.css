@@ -5,7 +5,7 @@
 html,
 body {
   height: 100%;
-  background: linear-gradient(rgb(148, 148, 148), 30%, white);
+  /* background: linear-gradient(rgb(148, 148, 148), 30%, white); */
 }
 
 .wrapper {
