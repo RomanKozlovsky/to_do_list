@@ -18,6 +18,7 @@ export default function Layout() {
   useEffect(() => {
     localStorage.setItem('todosList', JSON.stringify(textAreaValue), [textAreaValue])
   })
+  
 
   function catchDataFromTextarea(value) {
     const id = textAreaValue.length + 1;

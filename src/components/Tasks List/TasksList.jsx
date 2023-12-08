@@ -1,4 +1,3 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
 import style from "./TasksList.module.css";
 import { faHammer, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +11,7 @@ export default function TasksList(props) {
   const filterTask = props.data.filter((task) => {
     return task.text.toLowerCase().includes(search.toLowerCase());
   });
-  
+
   return (
     <>
       <div className={style.rightSideWrapper}>
