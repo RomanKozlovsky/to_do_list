@@ -24,6 +24,7 @@ export default function GetData() {
             <li>
               <p>
                 {item.id}. {item.title}
+                Roman
               </p>
             </li>
           ))}
