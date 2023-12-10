@@ -7,13 +7,10 @@ export default function InputTask(props) {
 
   const onKeyDown = (e) => {
     if (e.key === "Enter") {
+      props.onDataFromTextareaChange(textAreaValue);
+      setTextAreaValue('');
       myForm.current.reset();
-      props.catchDataFromTextarea(textAreaValue);
-      setTextAreaValue("");
-      myForm.current.reset();
-    } else {
-      return null;
-    }
+    } 
   };
 
   return (
@@ -27,7 +24,7 @@ export default function InputTask(props) {
             type="button"
             onClick={() => {
               myForm.current.reset();
-              props.catchDataFromTextarea(textAreaValue);
+              props.onDataFromTextareaChange(textAreaValue);
               setTextAreaValue("");
               myForm.current.reset();
             }}

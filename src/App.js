@@ -5,9 +5,12 @@ import LoginPage from "./components/Login Page/LoginPage.jsx";
 import RegistrationPage from "./components/Registration Page/RegistrationPage.jsx";
 import GetData from "./components/GetData.jsx";
 
+
 export default function App() {
+
   return (
     <div className="wrapper">
+
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="login" element={<LoginPage />} />

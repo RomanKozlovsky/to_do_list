@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 export default function TasksList(props) {
-  const [editFormClick, setEditForm] = useState(false);
+  const [editMode, setEditMode] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState("");
 
@@ -28,7 +28,7 @@ export default function TasksList(props) {
                 <div className={style.taskStyleWrapper}>
                   <div className={style.taskStyleBody}>
                     <div className={style.taskBodyStyle}>
-                      <input onClick={() => props.doneTask(index.id, index.text, index.isDone)} type="checkbox" />
+                      <input onClick={() => props.doneTask(index)} type="checkbox" />
                       {index.isDone ? (
                         <div className={`${style.taskDone} ${style.taskBodyStyle}`}>{index.text}</div>
                       ) : (
@@ -37,7 +37,7 @@ export default function TasksList(props) {
                     </div>
                     <div>
                       <span
-                        onClick={() => (props.setupForm(index.id, index.text), setEditForm(!editFormClick))}
+                        onClick={() => (props.setupForm(index.id, index.text), setEditMode(!editMode))}
                         className={`${style.taskStyleIcon} ${style.yellow}`}
                       >
                         <FontAwesomeIcon icon={faHammer} />
@@ -48,14 +48,14 @@ export default function TasksList(props) {
                     </div>
                   </div>
                 </div>
-                {editFormClick && index.id === props.currentId && (
+                {editMode && index.id === props.currentId && (
                   <div>
                     <form className={style.editForm}>
                       <input onChange={(event) => setInputValue(event.target.value)} type="text" placeholder="make changes" />
                       <br />
                       <button
                         disabled={!inputValue.length}
-                        onClick={() => (setEditForm(!editFormClick), props.editTask(index.id, inputValue), setInputValue(""))}
+                        onClick={() => (setEditMode(!editMode), props.editTask(index.id, inputValue), setInputValue(""))}
                         type="submit"
                       >
                         change...
