@@ -8,7 +8,7 @@ export default function TasksList(props) {
   const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState("");
 
-  const filterTask = props.data.filter((task) => {
+  const filterTask = props.textAreaValue.filter((task) => {
     return task.text.toLowerCase().includes(search.toLowerCase());
   });
 

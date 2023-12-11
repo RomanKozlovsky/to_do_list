@@ -1,9 +1,9 @@
-import style from "../Layout/Layout.module.css";
+import style from "../Home/Home.module.css";
 import InputTask from "../Input Task/InputTask";
 import { useState, useEffect } from "react";
 import TasksList from "../Tasks List/TasksList";
-import Header from "../header/Header";
-
+import Header from "../Header/Header";
+import React from "react";
 function useToDoList() {
   const [textAreaValue, setTextAreaValue] = useState([]);
   const [currentId, setCurrentId] = useState(null);
@@ -48,22 +48,28 @@ function useToDoList() {
 
   return { onDataFromTextareaChange, currentId, setupForm, textAreaValue, deleteTask, editTask, editFormText, doneTask };
 }
+export const context = React.createContext();
 
-export default function Layout() {
+export default function Home() {
   const { onDataFromTextareaChange, currentId, setupForm, textAreaValue, deleteTask, editTask, editFormText, doneTask } = useToDoList();
+
+  const [contextValue, setContextValue] = React.useState("text context");
+
   return (
     <div className={style.bodyWrapperStyle}>
-      <Header />
-      <InputTask onDataFromTextareaChange={onDataFromTextareaChange} />
-      <TasksList
-        currentId={currentId}
-        setupForm={setupForm}
-        data={textAreaValue}
-        deleteTask={deleteTask}
-        editTask={editTask}
-        editFormText={editFormText}
-        doneTask={doneTask}
-      />
+      <context.Provider value={{ contextValue, setContextValue }}>
+        <Header />
+        <InputTask onDataFromTextareaChange={onDataFromTextareaChange} />
+        <TasksList
+          currentId={currentId}
+          setupForm={setupForm}
+          textAreaValue={textAreaValue}
+          deleteTask={deleteTask}
+          editTask={editTask}
+          editFormText={editFormText}
+          doneTask={doneTask}
+        />
+      </context.Provider>
     </div>
   );
 }

@@ -1,13 +1,12 @@
 import style from "./LoginPage.module.css";
 import { Link } from "react-router-dom";
-import logo from "../img/logo.png";
 
-export default function LoginPage(props) {
+export default function LoginPage() {
   return (
     <>
       <div className={style.loginPageWrapper}>
         <div className={style.loginPageLogo}>
-          <img src={logo} alt="logo" />
+          <img src="/logo.png" alt="logo" />
         </div>
         <div className={style.loginPageAuthorizationForm}>
           <form action="">

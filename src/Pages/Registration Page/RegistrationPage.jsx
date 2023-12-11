@@ -1,6 +1,5 @@
 import style from "./RegistrationPage.module.css";
 import { Link } from "react-router-dom";
-import logo from "../img/logo.png";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useState } from "react";
 
@@ -8,13 +7,11 @@ export default function RegistrationPage(props) {
 
   const [newUser, setNewUser] = useState({});
 
-  console.log(props.name)
-
   return (
     <>
       <div className={style.loginPageWrapper}>
         <div className={style.loginPageLogo}>
-          <img src={logo} alt="logo" />
+        <img src="/logo.png" alt="logo" />
         </div>
 
         <Formik
