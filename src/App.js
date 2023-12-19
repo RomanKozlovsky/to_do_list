@@ -1,14 +1,19 @@
-import './App.css';
-import Body from './components/body/body';
-import Header from './components/header/header';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./Pages/Login Page/LoginPage.jsx";
+import RegistrationPage from "./Pages/Registration Page/RegistrationPage.jsx";
+import GetData from "./components/GetData.jsx";
+import Home from "./components/Home/Home.jsx";
+import NotFound from "./Pages/Not Found Page/not-found.jsx";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Body />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="registration" element={<RegistrationPage />} />
+      <Route path="test" element={<GetData />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
-
-export default App;
