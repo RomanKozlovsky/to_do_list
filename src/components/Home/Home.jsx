@@ -13,9 +13,11 @@ function useToDoList() {
   useEffect(() => {
     const todos = localStorage.getItem("todosList") || [];
     todos.length < 2 ? setTextAreaValue([]) : setTextAreaValue(JSON.parse(todos));
+    console.log(todos)
   }, []);
 
   useEffect(() => {
+    console.log('this')
     localStorage.setItem("todosList", JSON.stringify(textAreaValue), [textAreaValue]);
   });
 

@@ -28,9 +28,10 @@ export default function TasksList(props) {
                 <div className={style.taskStyleWrapper}>
                   <div className={style.taskStyleBody}>
                     <div className={style.taskBodyStyle}>
-                      <input onClick={() => props.doneTask(index)} type="checkbox" />
                       {index.isDone ? (
-                        <div className={`${style.taskDone} ${style.taskBodyStyle}`}>{index.text}</div>
+                        <div div className={`${style.taskDone} ${style.taskBodyStyle}`}>
+                          {index.text}
+                        </div>
                       ) : (
                         <div className={style.taskBodyStyle}>{index.text}</div>
                       )}
