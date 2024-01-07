@@ -2,7 +2,7 @@ import style from "../Layout/Layout.module.css";
 import InputTask from "../Input Task/InputTask";
 import { useState, useEffect } from "react";
 import TasksList from "../Tasks List/TasksList";
-import Header from "../header/Header";
+import Header from '../header/header';
 
 function useToDoList() {
   const [textAreaValue, setTextAreaValue] = useState([]);
