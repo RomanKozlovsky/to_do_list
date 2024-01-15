@@ -1,0 +1,74 @@
+import style from "./TasksList.module.css";
+import { faHammer, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+
+export default function TasksList(props) {
+  const [editMode, setEditMode] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [search, setSearch] = useState("");
+
+  const filterTask = props.textAreaValue.filter((task) => {
+    return task.text.toLowerCase().includes(search.toLowerCase());
+  });
+
+  return (
+    <>
+      <div className={style.rightSideWrapper}>
+        <div className={style.titleBody}>
+          <h1 className={style.rightSideTitle}>task list:</h1>
+          <input onChange={(event) => setSearch(event.target.value)} placeholder="search" />
+        </div>
+        {filterTask.length < 1 ? (
+          <h2 className={style.rightSideTitle}>task list is empty...</h2>
+        ) : (
+          <div>
+            {filterTask.map((index) => (
+              <div key={index.id}>
+                <div className={style.taskStyleWrapper}>
+                  <div className={style.taskStyleBody}>
+                    <div className={style.taskBodyStyle}>
+                      {index.isDone ? (
+                        <div div className={`${style.taskDone} ${style.taskBodyStyle}`}>
+                          {index.text}
+                        </div>
+                      ) : (
+                        <div className={style.taskBodyStyle}>{index.text}</div>
+                      )}
+                    </div>
+                    <div>
+                      <span
+                        onClick={() => (props.setupForm(index.id, index.text), setEditMode(!editMode))}
+                        className={`${style.taskStyleIcon} ${style.yellow}`}
+                      >
+                        <FontAwesomeIcon icon={faHammer} />
+                      </span>
+                      <span onClick={() => props.deleteTask(index.id)} className={`${style.taskStyleIcon} ${style.red}`}>
+                        <FontAwesomeIcon icon={faTrash} />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {editMode && index.id === props.currentId && (
+                  <div>
+                    <form className={style.editForm}>
+                      <input onChange={(event) => setInputValue(event.target.value)} type="text" placeholder="make changes" />
+                      <br />
+                      <button
+                        disabled={!inputValue.length}
+                        onClick={() => (setEditMode(!editMode), props.editTask(index.id, inputValue), setInputValue(""))}
+                        type="submit"
+                      >
+                        change...
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
