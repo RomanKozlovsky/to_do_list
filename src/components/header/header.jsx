@@ -9,7 +9,7 @@ export default function Header() {
     <>
       <div className={style.headerBodyStyle}>
         <div className={style.headerTitleStyle}>
-          To-do list:
+          To-do list first:
           <span className={style.headerDataStyle}> {curentDate.toLocaleDateString()}</span>
         </div>
         <Link className={style.logOut} to="/login">
